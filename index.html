@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecopro Training Centre - Kebun Abi</title>
+<meta name="description" content="Pusat latihan pertanian dan penternakan lestari di Kampung Nesam, Kangar, Perlis. Kompos, vermikompos, BSFL, Azolla, padi lestari dan ikan keli lestari.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ecopro Training Centre - Kebun Abi">
+<meta property="og:description" content="Pusat latihan pertanian dan penternakan lestari di Kampung Nesam, Perlis. Bekerja bersama alam sejak 2020.">
+<meta property="og:image" content="assets/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/logo-lockup.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
+<script>document.documentElement.className += " js";</script>
+
+<style>
+:root{
+  --ink:#1E201A;
+  --charcoal:#2C2F28;
+  --charcoal-2:#3A3D35;
+  --leaf:#8EA822;
+  --leaf-lift:#B4CE3A;
+  --husk:#E4E2D3;
+  --husk-dim:#C6C4B4;
+  --clay:#A8552F;
+  --paper-ink:#33362C;
+
+  --display:"Barlow Condensed",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  --gut:clamp(1.25rem,5vw,4rem);
+  --maxw:1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--husk);
+  font-family:var(--body);
+  font-size:clamp(1.02rem,.35vw + .95rem,1.14rem);
+  line-height:1.62;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut)}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--leaf-lift);
+  margin:0 0 1.1rem;
+}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,5.2vw,3.4rem);margin-bottom:1.4rem}
+h3{font-size:1.42rem;letter-spacing:0}
+
+/* ---------- header ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(30,32,26,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(228,226,211,.1);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
+.brand img{height:30px;width:auto}
+.langtoggle{display:flex;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em}
+.langtoggle button{
+  background:none;border:1px solid rgba(228,226,211,.24);color:var(--husk-dim);
+  padding:.38rem .7rem;cursor:pointer;font:inherit;letter-spacing:inherit;
+}
+.langtoggle button:first-child{border-right:0}
+.langtoggle button[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf);color:var(--ink);font-weight:500}
+.langtoggle button:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--leaf-lift);outline-offset:3px}
+html:not(.js) .langtoggle{display:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;isolation:isolate;padding-block:clamp(4rem,13vh,8rem) clamp(2.5rem,6vh,4rem)}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:url("assets/farm-aerial.jpg") center 42%/cover no-repeat;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(30,32,26,.30) 0%,rgba(30,32,26,.55) 40%,rgba(30,32,26,.93) 88%,rgba(30,32,26,1) 100%),
+    linear-gradient(90deg,rgba(30,32,26,.62) 0%,rgba(30,32,26,.18) 62%,rgba(30,32,26,0) 100%);
+}
+.hero h1{font-size:clamp(2.9rem,9vw,6.2rem);max-width:14ch;font-weight:700;text-shadow:0 2px 26px rgba(20,22,16,.6)}
+.hero .lede{font-size:clamp(1.1rem,1.4vw + .8rem,1.45rem);max-width:34ch;margin:1.5rem 0 2.2rem;color:#EDEBDF;text-shadow:0 1px 16px rgba(20,22,16,.7)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{
+  display:inline-block;text-decoration:none;font-family:var(--mono);
+  font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.9rem 1.5rem;border:1px solid var(--leaf);transition:background .18s,color .18s,border-color .18s;
+}
+.btn-solid{background:var(--leaf);color:var(--ink);font-weight:500}
+.btn-solid:hover{background:var(--leaf-lift);border-color:var(--leaf-lift)}
+.btn-ghost{color:var(--husk);background:rgba(30,32,26,.45)}
+.btn-ghost:hover{background:rgba(142,168,34,.28)}
+
+.facts{
+  display:flex;flex-wrap:wrap;gap:.55rem 2.4rem;
+  margin-top:clamp(2.5rem,8vh,5rem);padding-top:1.4rem;
+  border-top:1px solid rgba(228,226,211,.22);
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;color:var(--husk-dim);
+}
+.facts b{color:var(--leaf-lift);font-weight:500}
+
+/* ---------- generic sections ---------- */
+section{padding-block:clamp(3.5rem,9vh,6.5rem)}
+.cols{display:grid;gap:clamp(2rem,4vw,3.5rem);grid-template-columns:1fr}
+@media(min-width:880px){.cols{grid-template-columns:1.25fr .75fr;align-items:start}}
+.prose{max-width:60ch}
+.prose p{margin:0 0 1.15rem}
+.prose p:last-child{margin-bottom:0}
+.prose .close{font-size:1.28rem;line-height:1.45;color:#EDEBDF;border-left:2px solid var(--leaf);padding-left:1.1rem;margin-top:1.9rem}
+figure{margin:0}
+figcaption{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--husk-dim);margin-top:.7rem;line-height:1.5}
+
+/* spec card */
+.spec{border:1px solid rgba(228,226,211,.2);padding:1.5rem 1.4rem}
+.spec dl{margin:0;font-family:var(--mono);font-size:.78rem;line-height:1.55}
+.spec dt{color:var(--leaf-lift);letter-spacing:.1em;text-transform:uppercase;font-size:.63rem;margin-top:1.15rem}
+.spec dt:first-of-type{margin-top:0}
+.spec dd{margin:.3rem 0 0;color:var(--husk)}
+
+/* ---------- field manual (signature) ---------- */
+.manual{background:var(--husk);color:var(--paper-ink)}
+.manual .eyebrow{color:var(--clay)}
+.manual h2{color:var(--paper-ink)}
+.manual .head{text-align:center}
+.manual .head h2{margin-inline:auto;max-width:16ch}
+.manual .intro{max-width:52ch;margin:0 auto}
+
+.cycle{position:relative;margin:clamp(2rem,5vh,3.5rem) auto 0;max-width:660px}
+.cycle-svg{display:none}
+.node{
+  background:rgba(255,255,255,.66);
+  border:1px solid rgba(51,54,44,.26);
+  padding:.85rem .9rem;
+}
+.node .step{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--clay);display:block;margin-bottom:.3rem}
+.node .name{font-family:var(--display);font-size:1.22rem;font-weight:600;line-height:1.1;display:block}
+.node .note{font-size:.86rem;line-height:1.42;margin:.35rem 0 0;color:#4A4E42}
+
+.cycle-list{list-style:none;margin:0;padding:0 0 0 1.9rem;position:relative;display:grid;gap:1rem}
+.cycle-list::before{
+  content:"";position:absolute;left:.55rem;top:.6rem;bottom:3.4rem;
+  width:2px;background:repeating-linear-gradient(180deg,var(--clay) 0 6px,transparent 6px 12px);
+}
+.cycle-list li{position:relative}
+.cycle-list li::before{
+  content:"";position:absolute;left:-1.62rem;top:1rem;
+  width:9px;height:9px;border-radius:50%;background:var(--clay);
+}
+.loopback{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--clay);border:1px dashed var(--clay);padding:.55rem .8rem;text-align:center;margin:1rem 0 0;
+}
+
+@media(min-width:860px){
+  .cycle{aspect-ratio:1/1}
+  .cycle-svg{display:block;position:absolute;inset:0;width:100%;height:100%}
+  .cycle-list{padding:0;display:block;height:100%}
+  .cycle-list::before{display:none}
+  .cycle-list li{position:absolute;width:27%;transform:translate(-50%,-50%)}
+  .cycle-list li::before{display:none}
+  .cycle-list li:nth-child(1){left:50%;top:11%}
+  .cycle-list li:nth-child(2){left:83.8%;top:30.5%}
+  .cycle-list li:nth-child(3){left:83.8%;top:69.5%}
+  .cycle-list li:nth-child(4){left:50%;top:89%}
+  .cycle-list li:nth-child(5){left:16.2%;top:69.5%}
+  .cycle-list li:nth-child(6){left:16.2%;top:30.5%}
+  .loopback{display:none}
+}
+.ring{fill:none;stroke:var(--clay);stroke-width:.7;opacity:.55}
+html.js .ring{stroke-dasharray:245;stroke-dashoffset:245}
+html.js .cycle.drawn .ring{transition:stroke-dashoffset 1.9s cubic-bezier(.4,0,.2,1);stroke-dashoffset:0}
+.chev{fill:none;stroke:var(--clay);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+html.js .chev{opacity:0}
+html.js .cycle.drawn .chev{transition:opacity .5s ease 1.5s;opacity:.75}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.js .ring{stroke-dashoffset:0}
+  html.js .chev{opacity:.75}
+  html.js .cycle.drawn .ring,html.js .cycle.drawn .chev{transition:none}
+}
+
+/* ---------- workshops ---------- */
+.wk{list-style:none;margin:0;padding:0;border-top:1px solid rgba(228,226,211,.18)}
+.wk li{
+  border-bottom:1px solid rgba(228,226,211,.18);
+  padding:1.25rem 0;
+  display:grid;gap:.3rem 2rem;grid-template-columns:1fr;
+}
+@media(min-width:760px){.wk li{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);align-items:baseline}}
+.wk .t{font-family:var(--display);font-size:1.5rem;font-weight:600;line-height:1.12}
+.wk .m{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;color:var(--husk-dim);line-height:1.55}
+
+/* ---------- team ---------- */
+.team{display:grid;gap:clamp(1.8rem,3.5vw,2.6rem);grid-template-columns:1fr;margin-top:.5rem}
+@media(min-width:760px){.team{grid-template-columns:repeat(3,1fr)}}
+.person img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:saturate(.94);border:1px solid rgba(228,226,211,.14)}
+.person .p1{object-position:78% 18%}
+.person .p2{object-position:70% 10%}
+.person .p3{object-position:84% 30%}
+.person h3{margin:1.05rem 0 .15rem}
+.person .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf-lift);margin:0 0 .7rem}
+.person p{font-size:.94rem;line-height:1.55;margin:0;color:#D3D1C2}
+.person .extra{margin-top:.8rem;font-size:.83rem;color:var(--husk-dim);border-left:2px solid var(--leaf);padding-left:.8rem}
+
+/* ---------- stay ---------- */
+.stay{background:var(--charcoal)}
+.stay .cards{display:grid;gap:1.5rem;grid-template-columns:1fr;margin-top:2rem}
+@media(min-width:760px){.stay .cards{grid-template-columns:1fr 1fr}}
+.card{border:1px solid rgba(228,226,211,.18);padding:clamp(1.3rem,3vw,2rem)}
+.card h3{margin-bottom:.6rem}
+.card p{margin:0;font-size:.98rem;color:#D3D1C2}
+
+/* ---------- contact ---------- */
+.contact{background:var(--charcoal-2)}
+.cbox{display:grid;gap:clamp(1.8rem,4vw,3rem);grid-template-columns:1fr}
+@media(min-width:820px){.cbox{grid-template-columns:1.05fr .95fr;align-items:start}}
+.dl{margin:0}
+.dl dt{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--leaf-lift);margin-top:1.4rem}
+.dl dt:first-child{margin-top:0}
+.dl dd{margin:.35rem 0 0;font-size:1.02rem;line-height:1.5}
+.dl dd a{text-decoration:none;border-bottom:1px solid rgba(180,206,58,.5)}
+.dl dd a:hover{border-bottom-color:var(--leaf-lift)}
+.tbc{
+  display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;
+  text-transform:uppercase;background:var(--clay);color:#fff;padding:.16rem .48rem;margin-left:.45rem;
+  vertical-align:middle;white-space:nowrap;
+}
+.social{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.social a{
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-decoration:none;
+  border:1px solid rgba(228,226,211,.28);padding:.6rem 1rem;transition:border-color .18s,color .18s;
+}
+.social a:hover{border-color:var(--leaf);color:var(--leaf-lift)}
+
+footer{padding-block:2.5rem;border-top:1px solid rgba(228,226,211,.14);font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--husk-dim)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between}
+
+/* draft banner - delete this element before launch */
+.draftbar{background:var(--clay);color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-align:center;padding:.6rem 1rem;line-height:1.5}
+
+html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+html.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="draftbar" data-en="DRAFT FOR REVIEW - not published yet. Items tagged in RED still need confirming by ETC.">DRAF UNTUK SEMAKAN - belum diterbitkan. Ruangan bertanda MERAH masih perlu disahkan oleh ETC.</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ecopro Training Centre - Kebun Abi"><img src="assets/logo-ecopro.png" alt="Ecopro Training Centre" width="546" height="130"></a>
+    <div class="langtoggle" role="group" aria-label="Bahasa / Language">
+      <button type="button" data-lang="bm" aria-pressed="true">BM</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Kampung Nesam, Kangar, Perlis</p>
+    <h1 data-en="Working with nature.">Bekerja bersama alam.</h1>
+    <p class="lede" data-en="A sustainable farming and livestock training centre, on a farm that actually runs.">Pusat latihan pertanian dan penternakan lestari, di atas kebun yang benar-benar berjalan.</p>
+    <div class="actions">
+      <a class="btn btn-solid" href="#hubungi" data-en="Get in touch">Hubungi kami</a>
+      <a class="btn btn-ghost" href="#kitaran" data-en="What we teach">Apa yang kami ajar</a>
+    </div>
+    <p class="facts">
+      <span data-en="Operating since <b>2020</b>">Beroperasi sejak <b>2020</b></span>
+      <span data-en="<b>21</b> industrial-training students hosted"><b>21</b> pelajar latihan industri</span>
+      <span data-en="<b>2,000+</b> K2K course participants, USM 2014-2019"><b>2,000+</b> peserta kursus K2K, USM 2014-2019</span>
+    </p>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="wrap cols reveal">
+    <div class="prose">
+      <p class="eyebrow" data-en="About us">Tentang kami</p>
+      <h2 data-en="A training centre inside its own community.">Sebuah pusat latihan dalam komuniti.</h2>
+      <p data-en="Ecopro Training Centre was founded in 2016 by Dr. Mahamad Hakimi bin Ibrahim, a son of Perlis, and began operating in 2020. Since then it has run workshops and partnerships in sustainable farming and livestock.">Ecopro Training Centre diasaskan oleh Dr. Mahamad Hakimi bin Ibrahim, anak jati Perlis, pada tahun 2016 dan mula beroperasi pada tahun 2020. Sejak itu ETC mengadakan pelbagai bengkel dan kerjasama mengenai pertanian dan penternakan secara lestari.</p>
+      <p data-en="Through ecological integration, ETC aims to be a place where the community learns about sustainability and environmental education. Since 2020 it has hosted 21 industrial-training students from a range of fields and universities, alongside volunteers who come to learn.">Melalui integrasi secara ekologi, ETC berhasrat menjadi tempat komuniti mempelajari kelestarian alam dan pendidikan alam sekitar. Semenjak 2020, ETC telah menerima 21 pelajar latihan industri dari pelbagai bidang dan universiti, serta sukarelawan yang datang untuk belajar.</p>
+      <p class="close" data-en="This is not a demonstration plot. It is worked every day, and that is what gets taught.">Kebun ini bukan taman pameran. Ia diusahakan setiap hari, dan itulah yang diajar.</p>
+    </div>
+
+    <div class="spec">
+      <dl>
+        <dt data-en="Founded">Diasaskan</dt>
+        <dd>2016</dd>
+        <dt data-en="Operating since">Mula beroperasi</dt>
+        <dd>2020</dd>
+        <dt data-en="Location">Lokasi</dt>
+        <dd>Kampung Nesam, Kangar, Perlis</dd>
+        <dt data-en="Lead trainer">Pelatih utama</dt>
+        <dd>Dr. Mahamad Hakimi bin Ibrahim</dd>
+        <dt data-en="Fields taught">Bidang latihan</dt>
+        <dd data-en="Compost, vermicompost, BSFL, Azolla, biochar, sustainable rice, sustainable catfish">Kompos, vermikompos, BSFL, Azolla, biochar, padi lestari, ikan keli lestari</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="manual" id="kitaran">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-en="Curriculum">Kurikulum</p>
+      <h2 data-en="One farm, one cycle.">Satu kebun, satu kitaran.</h2>
+      <p class="intro" data-en="Every technique we teach feeds the next one. Today's waste becomes tomorrow's feed, and returns to the soil.">Setiap teknik yang kami ajar menyambung kepada teknik seterusnya. Sisa hari ini menjadi makanan esok, dan kembali semula ke tanah.</p>
+    </div>
+
+    <div class="cycle" id="cycle">
+      <svg class="cycle-svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle class="ring" cx="50" cy="50" r="39"></circle>
+        <g class="chev">
+          <path d="M48.2 8.2 L51.8 11 L48.2 13.8" transform="rotate(30 50 50)"></path>
+          <path d="M48.2 8.2 L51.8 11 L48.2 13.8" transform="rotate(90 50 50)"></path>
+          <path d="M48.2 8.2 L51.8 11 L48.2 13.8" transform="rotate(150 50 50)"></path>
+          <path d="M48.2 8.2 L51.8 11 L48.2 13.8" transform="rotate(210 50 50)"></path>
+          <path d="M48.2 8.2 L51.8 11 L48.2 13.8" transform="rotate(270 50 50)"></path>
+          <path d="M48.2 8.2 L51.8 11 L48.2 13.8" transform="rotate(330 50 50)"></path>
+        </g>
+      </svg>
+
+      <ol class="cycle-list">
+        <li class="node">
+          <span class="step">01</span>
+          <span class="name" data-en="Organic waste">Sisa organik</span>
+          <p class="note" data-en="Food and garden waste collected, not thrown away.">Sisa makanan dan sisa kebun dikumpul, bukan dibuang.</p>
+        </li>
+        <li class="node">
+          <span class="step">02</span>
+          <span class="name" data-en="Compost">Kompos</span>
+          <p class="note" data-en="Broken down into fertiliser that brings the soil back.">Diurai menjadi baja untuk menghidupkan semula tanah.</p>
+        </li>
+        <li class="node">
+          <span class="step">03</span>
+          <span class="name" data-en="Vermicompost">Vermikompos</span>
+          <p class="note" data-en="Worms produce a finer, richer fertiliser.">Cacing menghasilkan baja yang lebih halus dan kaya.</p>
+        </li>
+        <li class="node">
+          <span class="step">04</span>
+          <span class="name">BSFL</span>
+          <p class="note" data-en="Black soldier fly larvae turn waste into protein.">Larva lalat tentera hitam menukar sisa menjadi protein.</p>
+        </li>
+        <li class="node">
+          <span class="step">05</span>
+          <span class="name">Azolla</span>
+          <p class="note" data-en="A water fern: livestock feed and a nitrogen fixer.">Paku air yang jadi makanan ternakan dan pengikat nitrogen.</p>
+        </li>
+        <li class="node">
+          <span class="step">06</span>
+          <span class="name" data-en="Catfish &amp; rice">Ikan keli &amp; padi</span>
+          <p class="note" data-en="Fed by this cycle, and what is left returns to step 01.">Diberi makan oleh kitaran ini, dan sisanya kembali ke langkah 01.</p>
+        </li>
+      </ol>
+      <p class="loopback" data-en="&#8629; back to 01">&#8629; kembali ke 01</p>
+    </div>
+  </div>
+</section>
+
+<section id="bengkel">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-en="Workshops we have run">Bengkel yang telah diadakan</p>
+    <h2 data-en="Taught on the farm, not in a room.">Diajar di kebun, bukan di dalam bilik.</h2>
+    <ul class="wk">
+      <li>
+        <span class="t" data-en="Sustainable Catfish Farming Workshop">Bengkel Penternakan Ikan Keli Lestari</span>
+        <span class="m" data-en="With Dr. Khalidah Abd Hamid, Universiti Sains Malaysia">Bersama Dr. Khalidah Abd Hamid, Universiti Sains Malaysia</span>
+      </li>
+      <li>
+        <span class="t" data-en="Sustainable Rice Workshop">Bengkel Padi Lestari</span>
+        <span class="m" data-en="With Puan Salwati, SRI-MAS">Bersama Puan Salwati, SRI-MAS</span>
+      </li>
+      <li>
+        <span class="t" data-en="Citrus Sapling Workshop">Bengkel Anak Pokok Limau</span>
+        <span class="m" data-en="Raising and caring for saplings">Penyediaan dan penjagaan anak pokok</span>
+      </li>
+      <li>
+        <span class="t" data-en="Sustainable Garden Workshop Series">Siri Bengkel Kebun Lestari</span>
+        <span class="m" data-en="Three series, for the local community">Tiga siri, untuk komuniti setempat</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="pasukan">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-en="Our people">Orang kami</p>
+    <h2 data-en="Three people, one farm.">Tiga orang, satu kebun.</h2>
+    <div class="team">
+      <article class="person">
+        <img class="p1" src="assets/hakimi.jpg" alt="Dr. Mahamad Hakimi bin Ibrahim" loading="lazy" width="900" height="936">
+        <h3>Dr. Mahamad Hakimi bin Ibrahim</h3>
+        <p class="role" data-en="Director">Pengarah</p>
+        <p data-en="34 years lecturing in Environmental Technology at Universiti Sains Malaysia. Chemical Engineering degree from UMIST, PhD from Universiti Kebangsaan Malaysia (1994). Led the Kompos to Kelulut (K2K) project at USM from 2014 to 2019. ETC's lead trainer.">34 tahun sebagai pensyarah Teknologi Persekitaran di Universiti Sains Malaysia. Ijazah Kejuruteraan Kimia dari UMIST, PhD dari Universiti Kebangsaan Malaysia (1994). Mengetuai projek Kompos to Kelulut (K2K) di USM dari 2014 hingga 2019. Pelatih utama ETC.</p>
+        <p class="extra" data-en="Through K2K: the German Embassy (Go Green Kompos to Azolla), FRIM (Train the Trainers), schools, universities and government agencies.">Melalui K2K: Kedutaan Jerman (Go Green Kompos to Azolla), FRIM (Train the Trainers), sekolah, universiti dan agensi kerajaan.</p>
+      </article>
+      <article class="person">
+        <img class="p2" src="assets/ismail.jpg" alt="Ismail Mahamad Hakimi" loading="lazy" width="900" height="1036">
+        <h3>Ismail Mahamad Hakimi</h3>
+        <p class="role" data-en="Manager &amp; Marketing">Pengurus &amp; Pemasaran</p>
+        <p data-en="Diploma in Mechanical Engineering (UiTM), degree in Manufacturing Engineering (UniMAP), Master's in Mechanical Engineering (UTM, 2015). Runs ETC's operations, sales and marketing. Trainer for biochar, sustainable catfish, vermicompost, BSFL and Azolla.">Diploma Kejuruteraan Mekanikal (UiTM), Ijazah Kejuruteraan Pembuatan (UniMAP), Sarjana Kejuruteraan Mekanikal (UTM, 2015). Menguruskan operasi, jualan dan pemasaran ETC. Pelatih untuk biochar, ikan keli lestari, vermikompos, BSFL dan Azolla.</p>
+      </article>
+      <article class="person">
+        <img class="p3" src="assets/sakiinah.jpg" alt="Sakiinah binti Mahamad Hakimi" loading="lazy" width="900" height="872">
+        <h3>Sakiinah binti Mahamad Hakimi</h3>
+        <p class="role" data-en="Community Relations &amp; Social Media">Perhubungan Komuniti &amp; Media Sosial</p>
+        <p data-en="Degree in Communications (Broadcasting) 2010 and a Master's in Political Science 2015, Universiti Sains Malaysia. Founded the volunteer programme for the K2K project at Bukit TI. Organised Bazaar Alam TI 2019 and Eco Farm Fair 2019. Supervises industrial-training students at ETC.">Ijazah Komunikasi (Penyiaran) 2010 dan Sarjana Sains Politik 2015, Universiti Sains Malaysia. Pengasas program sukarelawan projek K2K di Bukit TI. Menganjurkan Bazaar Alam TI 2019 dan Eco Farm Fair 2019. Menyelia pelajar latihan industri di ETC.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="stay" id="kunjungan">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-en="Come to the farm">Datang ke kebun</p>
+    <h2 data-en="Ways to join us.">Cara untuk menyertai kami.</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Kebunstay</h3>
+        <p data-en="Stay on the farm, live at kampung pace, and spend a full day doing what a farmer does.">Menginap di kebun, merasai kehidupan kampung, dan mengalami sendiri kerja seorang petani untuk satu hari penuh.</p>
+      </div>
+      <div class="card">
+        <h3 data-en="Internships &amp; volunteers">Latihan industri &amp; sukarelawan</h3>
+        <p data-en="We host industrial-training students from any field or university, and volunteers who want to learn sustainable farming hands-on.">Kami menerima pelajar latihan industri dari pelbagai bidang dan universiti, serta sukarelawan yang ingin belajar pertanian lestari secara langsung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="hubungi">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-en="Get in touch">Hubungi kami</p>
+    <h2 data-en="Find us in Kampung Nesam.">Kami di Kampung Nesam.</h2>
+    <div class="cbox">
+      <dl class="dl">
+        <dt data-en="Address">Alamat</dt>
+        <dd>Lot 8111, Lorong Ikat Setia,<br>Jalan Kurong Batang, KM 6,<br>Kampung Nesam, 01000 Kangar, Perlis<span class="tbc" data-en="confirm">sahkan</span></dd>
+
+        <dt>WhatsApp</dt>
+        <dd><span data-en="Number not supplied yet">Nombor belum diberi</span><span class="tbc" data-en="needed">perlu</span></dd>
+
+        <dt data-en="Email">E-mel</dt>
+        <dd><span data-en="Email address not supplied yet">Alamat e-mel belum diberi</span><span class="tbc" data-en="needed">perlu</span></dd>
+
+        <dt data-en="Opening hours / visits">Waktu lawatan</dt>
+        <dd><span data-en="Not supplied yet">Belum diberi</span><span class="tbc" data-en="needed">perlu</span></dd>
+      </dl>
+
+      <div>
+        <div class="spec">
+          <dl>
+            <dt data-en="Follow the farm">Ikuti kebun</dt>
+            <dd data-en="Day-to-day work, harvests and workshops are posted on Instagram and TikTok as @kebunabi, and on Facebook as Ecopro Training Centre.">Kerja harian, hasil tuaian dan bengkel dikongsi di Instagram dan TikTok sebagai @kebunabi, dan di Facebook sebagai Ecopro Training Centre.</dd>
+          </dl>
+        </div>
+        <div class="social">
+          <a href="https://www.instagram.com/kebunabi/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@kebunabi" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/ecoprotrainingcentre/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Ecopro Training Centre - Kebun Abi</span>
+    <span>Kampung Nesam, Kangar, Perlis, Malaysia</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-en]'));
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.langtoggle button'));
+
+  // Malay lives in the markup, so the page still reads fine with no JS.
+  // Stash it on first run, then swap freely.
+  nodes.forEach(function(el){ el.setAttribute('data-bm', el.innerHTML); });
+
+  function apply(lang){
+    nodes.forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if (v !== null) el.innerHTML = v;
+    });
+    document.documentElement.lang = (lang === 'bm') ? 'ms' : 'en';
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    try { localStorage.setItem('etc-lang', lang); } catch (e) {}
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem('etc-lang'); } catch (e) {}
+  if (saved === 'en') apply('en');
+
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ apply(b.dataset.lang); });
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    var c0 = document.getElementById('cycle'); if (c0) c0.classList.add('drawn');
+    return;
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  var cycle = document.getElementById('cycle');
+  if (cycle){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ cycle.classList.add('drawn'); io2.unobserve(e.target); }
+      });
+    }, { threshold: 0.25 });
+    io2.observe(cycle);
+  }
+})();
+</script>
+</body>
+</html>
