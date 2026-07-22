@@ -13,14 +13,31 @@ Open `index.html` in a browser and it works.
 ```
 index.html          the whole site
 assets/
-  farm-aerial.jpg   hero background (drone shot of the kebun)
+  farm-aerial.jpg   hero background (drone shot of the kebun), 1280px wide
   hakimi.jpg        Dr. Mahamad Hakimi
   ismail.jpg        Ismail Mahamad Hakimi
   sakiinah.jpg      Sakiinah binti Mahamad Hakimi
   logo-ecopro.png   ECOPRO wordmark (white "ECO", needs a dark background)
-  logo-lockup.png   round full lockup, used as the favicon
+  icon.png          leaf mark cropped from the wordmark. Favicon and touch icon
+  logo-lockup.png   round full lockup. Not loaded by the page, kept as ETC's archive copy
   og-card.jpg       1200x630 preview card shown when the link is shared on WhatsApp
 ```
+
+## Page weight
+
+Most visitors are on a phone on a rural Malaysian connection, so first paint is kept small.
+Only three files load before the hero is complete: the HTML, `farm-aerial.jpg` and
+`logo-ecopro.png`. The three team portraits are `loading="lazy"` and only fetch when the
+visitor scrolls to them.
+
+Current first paint is about 320 KB. If you replace the hero photo, resize it to 1280px wide
+and save it at JPEG quality 74 or lower. The hero sits under a heavy dark gradient, so a
+smaller file is not visible: dropping it from 1600px to 1280px changed the rendered page by
+0.4 percent and nothing else.
+
+Do not point the favicon at a full logo file. A logo with a ring of small text is an
+unreadable smudge at 32 pixels, and the browser downloads it on every single page load.
+`icon.png` exists for this.
 
 ## Editing the text
 
@@ -61,11 +78,40 @@ attaches their own domain.
    (e.g. `https://kebunabi.com/assets/og-card.jpg`). They must be absolute URLs or the
    WhatsApp link preview breaks.
 
+## When ETC sends the missing details
+
+Decided: the details come back to this repo and get committed here, rather than being handed
+over as a file for someone to paste in. The four unconfirmed items are already tagged
+`class="tbc"` in `index.html`, so filling them in is a four line edit plus a push. Keeping it
+in one place means the Malay and the English cannot drift apart, and the pre-launch checklist
+below stays the single source of truth for what is still outstanding.
+
+Nothing supplied by ETC gets paraphrased or "tidied". An address, a phone number and an
+opening time are facts. They go in exactly as given.
+
 ## Hosting
 
-Static files. Any static host works. The recommendation is Cloudflare Pages on an account
-owned by ETC, with the domain registered through Cloudflare Registrar at cost price, so the
-whole thing is one login to hand over and roughly RM45 a year with no hosting fee.
+Static files, so any static host works.
+
+Decided for launch: rebuild the site on **Cloudflare Pages under an account owned by ETC**,
+then delete the GitHub Pages copy. Not a transfer of this GitHub repository.
+
+The reasoning: ETC needs the domain, the DNS, the certificate and the hosting to sit behind
+one login they control. Cloudflare covers all four for free apart from the domain itself,
+which is roughly RM45 a year at cost through Cloudflare Registrar. Handing over a GitHub
+repository instead would mean a farm training centre maintaining a developer account they
+will never open again, and the volunteer who built it staying on as the permanent unpaid
+webmaster. That is the failure mode this project is specifically trying to avoid.
+
+Deploying is a drag and drop of this folder into Cloudflare Pages. No git, no build step, no
+command line. Whoever holds the ETC account can do it.
+
+One caveat on the domain. Cloudflare Registrar does not sell `.my` domains, so if ETC prefers
+`kebunabi.my` over `kebunabi.com` the domain has to be bought from a MYNIC accredited
+registrar and pointed at Cloudflare's nameservers. The hosting side is unchanged either way.
+
+Once the Cloudflare copy is live and the domain resolves, delete the GitHub repository. Two
+public copies of the same site competing in search results helps nobody.
 
 ## Content provenance
 

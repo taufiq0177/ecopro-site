@@ -20,6 +20,11 @@ No framework, no build step, no package manager, no backend. Keep it that way.
    `logo-ecopro.png` on the pale `--husk` section.
 4. **No em dash** anywhere, including copy and comments. Hyphen, comma or colon.
 5. **Draft banner stays until ETC signs off.** `.draftbar` is removed at launch, not before.
+6. **Guard first paint.** The audience is on phones on rural Malaysian connections. Only the
+   HTML, `farm-aerial.jpg` and `logo-ecopro.png` may load before the hero is complete, and the
+   total stays near 320 KB. Any new photo below the fold gets `loading="lazy"`. Hero replacements
+   get resized to 1280px and saved at JPEG quality 74 or lower; the dark gradient over the hero
+   hides the difference. The favicon is `icon.png` and never a full logo file.
 
 ## Design tokens
 
