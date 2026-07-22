@@ -215,6 +215,8 @@ html.js .cycle.drawn .chev{transition:opacity .5s ease 1.5s;opacity:.75}
 /* ---------- team ---------- */
 .team{display:grid;gap:clamp(1.8rem,3.5vw,2.6rem);grid-template-columns:1fr;margin-top:.5rem}
 @media(min-width:760px){.team{grid-template-columns:repeat(3,1fr)}}
+.person{display:flex;flex-direction:column}
+.person > p:last-of-type{margin-bottom:1rem}
 .person img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:saturate(.94);border:1px solid rgba(228,226,211,.14)}
 .person .p1{object-position:78% 18%}
 .person .p2{object-position:70% 10%}
@@ -223,7 +225,7 @@ html.js .cycle.drawn .chev{transition:opacity .5s ease 1.5s;opacity:.75}
 .person .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf-lift);margin:0 0 .7rem}
 .person p{font-size:.94rem;line-height:1.55;margin:0;color:#D3D1C2}
 .person .extra{margin-top:.8rem;font-size:.83rem;color:var(--husk-dim);border-left:2px solid var(--leaf);padding-left:.8rem}
-.person details{margin-top:1rem;border-top:1px solid rgba(228,226,211,.16);padding-top:.75rem}
+.person details{margin-top:auto;border-top:1px solid rgba(228,226,211,.16);padding-top:.75rem}
 .person summary{
   cursor:pointer;list-style:none;
   font-family:var(--mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
