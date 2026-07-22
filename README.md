@@ -110,8 +110,24 @@ One caveat on the domain. Cloudflare Registrar does not sell `.my` domains, so i
 `kebunabi.my` over `kebunabi.com` the domain has to be bought from a MYNIC accredited
 registrar and pointed at Cloudflare's nameservers. The hosting side is unchanged either way.
 
-Once the Cloudflare copy is live and the domain resolves, delete the GitHub repository. Two
-public copies of the same site competing in search results helps nobody.
+Once the Cloudflare copy is live and the domain resolves, do **not** delete this repository
+straight away. The preview link has already been sent to ETC, so it may end up pasted into a
+WhatsApp group, an Instagram bio or a poster. Deleting the repo turns every one of those into
+a dead link.
+
+Instead, replace `index.html` here with a redirect stub and leave the repo up for a year:
+
+```html
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=https://kebunabi.com/">
+<link rel="canonical" href="https://kebunabi.com/">
+<p>Ecopro Training Centre has moved to <a href="https://kebunabi.com/">kebunabi.com</a></p>
+```
+
+Delete the `assets/` folder at the same time so there is only one copy of the photos in
+public. After a year, when nothing is still pointing here, delete the repository.
 
 ## Content provenance
 
