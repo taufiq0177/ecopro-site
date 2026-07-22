@@ -9,7 +9,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ecopro Training Centre - Kebun Abi">
 <meta property="og:description" content="Pusat latihan pertanian dan penternakan lestari di Kampung Nesam, Perlis. Bekerja bersama alam sejak 2020.">
-<meta property="og:image" content="assets/og-card.jpg">
+<meta property="og:image" content="https://taufiq0177.github.io/ecopro-site/assets/og-card.jpg">
+<meta property="og:url" content="https://taufiq0177.github.io/ecopro-site/">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/logo-lockup.png">
@@ -222,6 +223,19 @@ html.js .cycle.drawn .chev{transition:opacity .5s ease 1.5s;opacity:.75}
 .person .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf-lift);margin:0 0 .7rem}
 .person p{font-size:.94rem;line-height:1.55;margin:0;color:#D3D1C2}
 .person .extra{margin-top:.8rem;font-size:.83rem;color:var(--husk-dim);border-left:2px solid var(--leaf);padding-left:.8rem}
+.person details{margin-top:1rem;border-top:1px solid rgba(228,226,211,.16);padding-top:.75rem}
+.person summary{
+  cursor:pointer;list-style:none;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--leaf-lift);display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+}
+.person summary::-webkit-details-marker{display:none}
+.person summary::after{content:"+";font-family:var(--mono);font-size:.95rem;line-height:1;color:var(--leaf)}
+.person details[open] summary::after{content:"-"}
+.person summary:hover{color:var(--leaf)}
+.person .full{margin-top:.85rem}
+.person .full p{font-size:.85rem;line-height:1.62;color:var(--husk-dim);margin:0 0 .75rem}
+.person .full p:last-child{margin-bottom:0}
 
 /* ---------- stay ---------- */
 .stay{background:var(--charcoal)}
@@ -416,20 +430,46 @@ html.js .reveal.in{opacity:1;transform:none}
         <img class="p1" src="assets/hakimi.jpg" alt="Dr. Mahamad Hakimi bin Ibrahim" loading="lazy" width="900" height="936">
         <h3>Dr. Mahamad Hakimi bin Ibrahim</h3>
         <p class="role" data-en="Director">Pengarah</p>
-        <p data-en="34 years lecturing in Environmental Technology at Universiti Sains Malaysia. Chemical Engineering degree from UMIST, PhD from Universiti Kebangsaan Malaysia (1994). Led the Kompos to Kelulut (K2K) project at USM from 2014 to 2019. ETC's lead trainer.">34 tahun sebagai pensyarah Teknologi Persekitaran di Universiti Sains Malaysia. Ijazah Kejuruteraan Kimia dari UMIST, PhD dari Universiti Kebangsaan Malaysia (1994). Mengetuai projek Kompos to Kelulut (K2K) di USM dari 2014 hingga 2019. Pelatih utama ETC.</p>
+        <p data-en="34 years lecturing in Environmental Technology at Universiti Sains Malaysia. ETC's lead trainer in integrated sustainable farming and livestock.">34 tahun sebagai pensyarah Teknologi Persekitaran di Universiti Sains Malaysia. Pelatih utama ETC dalam pertanian dan penternakan lestari secara bersepadu.</p>
         <p class="extra" data-en="Through K2K: the German Embassy (Go Green Kompos to Azolla), FRIM (Train the Trainers), schools, universities and government agencies.">Melalui K2K: Kedutaan Jerman (Go Green Kompos to Azolla), FRIM (Train the Trainers), sekolah, universiti dan agensi kerajaan.</p>
+        <details>
+          <summary data-en="Full background">Latar belakang penuh</summary>
+          <div class="full">
+            <p data-en="A son of Perlis, Dr. Hakimi served 34 years as a lecturer in Environmental Technology at Universiti Sains Malaysia (USM). He completed his bachelor's and master's degrees in Chemical Engineering in 1981 at the University of Manchester Institute of Science and Technology (UMIST), and earned his PhD from Universiti Kebangsaan Malaysia in 1994.">Seorang anak jati Perlis, Dr. Hakimi pernah berkhidmat selama 34 tahun sebagai pensyarah Teknologi Persekitaran di Universiti Sains Malaysia (USM). Beliau menamatkan pengajian ijazah sarjana muda sehingga sarjana dalam Kejuruteraan Kimia pada tahun 1981 di University of Manchester Institute of Science and Technology (UMIST) dan memperoleh PhD dari Universiti Kebangsaan Malaysia pada tahun 1994.</p>
+            <p data-en="Before retiring in 2019 he spent close to ten years researching integrated green technology through compost, vermicompost, BSFL and Azolla. Among his projects was Kompos to Kelulut (K2K), which ran from 2014 to 2019 through the Rooftop Garden and Green Technology Garden at Bukit TI, USM.">Sebelum bersara secara rasmi pada 2019, beliau telah menjalankan pelbagai kajian mengenai teknologi hijau bersepadu melalui kompos, vermikompos, BSFL dan Azolla hampir 10 tahun. Antara projek yang dijalankan beliau ialah projek Kompos to Kelulut (K2K) dari tahun 2014 hingga 2019 melalui projek Rooftop Garden dan Green Technology Garden di Bukit TI, USM.</p>
+            <p data-en="Throughout that project the Ecoprocess Technology Research Group he led ran green technology courses with livestock keepers, farmers, communities, schools, institutions, universities and government agencies. More than 2,000 participants attended and benefited from these knowledge-transfer courses, learning to turn organic food waste into downstream products through compost, vermicompost, BSFL and Azolla.">Sepanjang projek tersebut, pasukan Ecoprocess Technology Research Group yang dipimpin oleh beliau telah menjalankan kursus teknologi hijau bersama penternak, petani, komuniti, sekolah-sekolah, institusi, universiti dan agensi kerajaan. Lebih dari 2000 peserta telah menghadiri dan mendapat manfaat dari kursus di bawah projek pemindahan ilmu, di mana peserta dapat mempelajari cara mengolah semula sisa makanan organik menjadi pelbagai produk hiliran dari kompos, vermikompos, BSFL dan Azolla.</p>
+            <p data-en="Institutions that trained under K2K include the German Embassy, through the Go Green Kompos to Azolla project in Negeri Sembilan, and the Forest Research Institute Malaysia (FRIM), through a Train the Trainers programme. Participants received purpose-written modules and guidance throughout their training at Bukit TI, which served as a community training centre and living laboratory for students and the community at USM.">Antara institusi yang telah menghadiri kursus dan latihan di bawah projek K2K ialah Kedutaan Jerman melalui projek Go Green Kompos to Azolla di Negeri Sembilan, dan projek Train the Trainers kepada Forest Research Institute Malaysia (FRIM). Modul khas diberikan kepada peserta dan bimbingan diberikan sepanjang latihan di Bukit TI, yang menjadi pusat latihan komuniti dan makmal hidup atau living laboratory untuk pelajar dan komuniti di Universiti Sains Malaysia.</p>
+            <p data-en="After retiring he returned to his home village to build sustainable farming and livestock on his own land, extending his knowledge and experience for the good of the environment and the local community. At ETC he is the lead trainer in integrated sustainable farming and livestock, covering compost, vermicompost, BSFL, Azolla, sustainable rice and sustainable catfish. He also consults on ecosystem design and restoration, guiding farmers and livestock keepers who want to work sustainably in their own communities.">Setelah bersara, beliau pulang ke kampung halaman untuk membangunkan pertanian dan penternakan lestari melalui kebun beliau sendiri, bagi mengembangkan lagi ilmu dan pengalaman beliau demi kelestarian alam dan manfaat kepada komuniti setempat. Di ETC, Dr. Hakimi merupakan pelatih utama dalam pertanian dan penternakan lestari secara bersepadu, antaranya kompos, vermikompos, BSFL, Azolla, padi lestari dan ikan keli lestari. Beliau juga merupakan perunding dan pakar dalam rekabentuk dan pemulihan ekosistem, membimbing penternak atau petani yang berminat mengusahakan penternakan atau pertanian secara lestari di komuniti masing-masing.</p>
+          </div>
+        </details>
       </article>
       <article class="person">
         <img class="p2" src="assets/ismail.jpg" alt="Ismail Mahamad Hakimi" loading="lazy" width="900" height="1036">
         <h3>Ismail Mahamad Hakimi</h3>
         <p class="role" data-en="Manager &amp; Marketing">Pengurus &amp; Pemasaran</p>
-        <p data-en="Diploma in Mechanical Engineering (UiTM), degree in Manufacturing Engineering (UniMAP), Master's in Mechanical Engineering (UTM, 2015). Runs ETC's operations, sales and marketing. Trainer for biochar, sustainable catfish, vermicompost, BSFL and Azolla.">Diploma Kejuruteraan Mekanikal (UiTM), Ijazah Kejuruteraan Pembuatan (UniMAP), Sarjana Kejuruteraan Mekanikal (UTM, 2015). Menguruskan operasi, jualan dan pemasaran ETC. Pelatih untuk biochar, ikan keli lestari, vermikompos, BSFL dan Azolla.</p>
+        <p data-en="Runs ETC's operations, sales and marketing. Trainer for biochar, sustainable catfish, vermicompost, BSFL and Azolla.">Menguruskan operasi, jualan dan pemasaran di ETC. Pelatih untuk biochar, ikan keli lestari, vermikompos, BSFL dan Azolla.</p>
+        <details>
+          <summary data-en="Full background">Latar belakang penuh</summary>
+          <div class="full">
+            <p data-en="A graduate with a Diploma in Mechanical Engineering from UiTM and a bachelor's degree in Manufacturing Engineering from UniMAP, before completing a Master's in Mechanical Engineering at UTM in 2015.">Merupakan graduan Diploma dalam Kejuruteraan Mekanikal dari UiTM dan Ijazah Sarjana Muda Kejuruteraan Pembuatan dari UniMAP, sebelum melanjutkan pelajaran Sarjana Kejuruteraan Mekanikal dari UTM pada tahun 2015.</p>
+            <p data-en="He is responsible for management, sales and marketing at ETC. He is also a trainer in biochar, sustainable catfish farming, vermicompost, BSFL and Azolla.">Beliau bertanggungjawab ke atas pengurusan, jualan dan pemasaran di ETC. Beliau juga merupakan pelatih biochar, penternakan ikan keli lestari, vermikompos, BSFL dan Azolla.</p>
+          </div>
+        </details>
       </article>
       <article class="person">
         <img class="p3" src="assets/sakiinah.jpg" alt="Sakiinah binti Mahamad Hakimi" loading="lazy" width="900" height="872">
         <h3>Sakiinah binti Mahamad Hakimi</h3>
         <p class="role" data-en="Community Relations &amp; Social Media">Perhubungan Komuniti &amp; Media Sosial</p>
-        <p data-en="Degree in Communications (Broadcasting) 2010 and a Master's in Political Science 2015, Universiti Sains Malaysia. Founded the volunteer programme for the K2K project at Bukit TI. Organised Bazaar Alam TI 2019 and Eco Farm Fair 2019. Supervises industrial-training students at ETC.">Ijazah Komunikasi (Penyiaran) 2010 dan Sarjana Sains Politik 2015, Universiti Sains Malaysia. Pengasas program sukarelawan projek K2K di Bukit TI. Menganjurkan Bazaar Alam TI 2019 dan Eco Farm Fair 2019. Menyelia pelajar latihan industri di ETC.</p>
+        <p data-en="Runs ETC's community relations and social media, and supervises industrial-training students throughout their placements.">Menguruskan perhubungan komuniti dan media sosial ETC, serta menyelia pelajar latihan industri sepanjang tempoh latihan mereka.</p>
+        <details>
+          <summary data-en="Full background">Latar belakang penuh</summary>
+          <div class="full">
+            <p data-en="Sakiinah graduated with a degree in Communications (Broadcasting) in 2010 and went on to a Master's in Political Science in 2015, both from Universiti Sains Malaysia.">Sakiinah merupakan graduan ijazah Komunikasi (Penyiaran) pada tahun 2010 dan melanjutkan ijazah sarjana dalam Sains Politik pada tahun 2015, kedua-duanya dari Universiti Sains Malaysia.</p>
+            <p data-en="She founded the volunteer programme for the Kompos to Kelulut research project at Bukit TI, and organised Bazaar Alam TI 2019 and Eco Farm Fair 2019. She has been an invited speaker at the forum &quot;Youth for Future Penang&quot; hosted by Penang Green Council in 2017, and at &quot;Growing Rice, Growing Life&quot; hosted by Urban Farm Tech in 2020.">Beliau merupakan pengasas program sukarelawan untuk kajian projek Kompos to Kelulut di Bukit TI, dan bertanggungjawab menganjurkan Bazaar Alam TI 2019 dan Eco Farm Fair 2019. Sakiinah juga merupakan salah seorang penceramah jemputan di forum "Youth for Future Penang" anjuran Penang Green Council 2017, dan "Growing Rice, Growing Life" anjuran Urban Farm Tech 2020.</p>
+            <p data-en="She has a deep interest in local knowledge, and presented her research on Malay tradition and culture at the International Conference on Local Knowledge from 2011 to 2018. Her research also covers the Malay community of Cape Town, which she studied in 2016 and presented as &quot;Warisan Budaya Melayu Capetown&quot; at Bicara @ Muzium Negara in 2018, and at Wacana Peradaban Melayu: Peradaban Melayu Merentasi Samudera, hosted by Universiti Pendidikan Sultan Idris in 2018.">Beliau mempunyai minat mendalam mengenai Kearifan Tempatan dan menyertai International Conference on Local Knowledge bagi membentangkan kajiannya mengenai tradisi dan budaya orang Melayu dari 2011 sehingga 2018. Beliau juga membuat kajian mengenai komuniti orang Melayu di Capetown pada tahun 2016, dibentangkan sebagai "Warisan Budaya Melayu Capetown" di Bicara @ Muzium Negara (2018), dan di Wacana Peradaban Melayu: Peradaban Melayu Merentasi Samudera anjuran Universiti Pendidikan Sultan Idris (2018).</p>
+            <p data-en="At ETC she is the community relations and social media officer, producing corporate video of activities and training, and supervising industrial-training students throughout their placements. She is also a trainer for the internship and volunteer programmes in sustainable farming.">Di ETC, beliau merupakan pegawai perhubungan komuniti dan media sosial yang menguruskan penghasilan video korporat, aktiviti dan latihan di ETC, serta menyelia pelajar latihan industri sepanjang tempoh latihan mereka. Beliau juga merupakan jurulatih untuk program internship dan sukarelawan berkaitan pertanian lestari.</p>
+          </div>
+        </details>
       </article>
     </div>
   </div>
