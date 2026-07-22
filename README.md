@@ -44,14 +44,22 @@ python3 -m http.server 8899
 # open http://127.0.0.1:8899/
 ```
 
+## Current preview
+
+<https://taufiq0177.github.io/ecopro-site/> - temporary, hosted from this repo via GitHub
+Pages. It is marked `noindex` and carries a draft banner. This link gets retired once ETC
+attaches their own domain.
+
 ## Before it goes live
 
 1. Delete the `<div class="draftbar">...</div>` element near the top of `<body>`.
-2. Fill in the four items currently tagged `SAHKAN` / `PERLU` in the contact section:
+2. Delete the `<meta name="robots" content="noindex, nofollow">` tag in `<head>`. Leaving it
+   in means Google never lists the site at all.
+3. Fill in the four items currently tagged `SAHKAN` / `PERLU` in the contact section:
    WhatsApp number, email, confirmed address, visiting hours.
-3. Point `og:image` at the absolute URL once the domain exists
-   (e.g. `https://kebunabi.com/assets/og-card.jpg`). Relative paths work on most
-   platforms but WhatsApp is more reliable with an absolute URL.
+4. Repoint `og:image` and `og:url` from the GitHub Pages address to the real domain
+   (e.g. `https://kebunabi.com/assets/og-card.jpg`). They must be absolute URLs or the
+   WhatsApp link preview breaks.
 
 ## Hosting
 
